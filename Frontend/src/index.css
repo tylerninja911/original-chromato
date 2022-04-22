@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  /* overflow-y:hidden; */
+
+}
+
+
+body {
+  margin: 0;
+  padding:0;
+  box-sizing:border-box;
+  /* height: 100vh; */
+  /* overflow-y:hidden; */
+  overflow-x:hidden;
+  scrollbar-width:none !important;
+
+}
+
+body::-webkit-scrollbar {
+  width:0px;
+  background:transparent;
+  scrollbar-width:none !important;
+}
+
+
+div::-webkit-scrollbar {
+  width:6px;
+}
+
+div::-webkit-scrollbar-thumb{
+  background:rgba(0,0,0,.5);
+  border-radius:6px;
+} 
+
+
+[data-tooltip]:before {
+  /* needed - do not touch */
+  content: attr(data-tooltip);
+  position: absolute;
+  opacity: 0;
+  
+  /* customizable */
+  transition: all 0.15s ease;
+  padding: 10px;
+  color: #eee;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px silver;    
+}
+
+[data-tooltip]:hover:before {
+  /* needed - do not touch */
+  opacity: 1;
+  
+  /* customizable */
+  background: #3b3b3b !important;
+  margin-top: 25px;
+  margin-left: 0px;    
+}
+
+/* [data-tooltip]:hover{
+  background: black !important;
+
+} */
+
+[data-tooltip]:hover::after {
+  opacity: 1; 
+  color:#fff 
+}
+
+[data-tooltip]:not([data-tooltip-persistent]):before {
+  pointer-events: none;
+}
+
+
+
+
+/* div.cart-preview::-webkit-scrollbar {
+  width:6px;
+}
+
+div.cart-preview::-webkit-scrollbar-thumb{
+  background:rgba(0,0,0,.5);
+  border-radius:6px;
+} 
+
+
+ */
+
+
+/* 
+::-webkit-scrollbar {
+  display: none; 
+
+}
+
+.cart-preview::-webkit-scrollbar {
+  display: block;
+
+} */
+
+::-webkit-scrollbar-thumb{
+  background:#d3d3d3;
+  border-radius:6px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ::-webkit-scrollbar {
+  width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+  background:#d3d3d3;
+  border-radius:6px;
+} */
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */

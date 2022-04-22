@@ -1,0 +1,26 @@
+.dish-image{
+    height:calc(100vh - 100px);
+}
+
+/* @media (min-width: 300px) and (max-width: 650px) */
+
+.stars {
+    display:inline-block;
+    width: 13px;
+    height: 13px;
+    background-image: url(https: //i.stack.imgur.com/KaEDC.png);
+    
+}
+       .stars - 2 {
+          width: 26 px;
+       }
+       .stars - 3 {
+          width: 39 px;
+       }
+       .stars - 4 {
+          width: 52 px;
+       }
+       .stars - 5 {
+          width: 65 px;
+       }
+ 
